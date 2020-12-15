@@ -1,9 +1,7 @@
 import os
 from sqlalchemy import Column, String, Integer, Boolean, create_engine
 from flask_sqlalchemy import SQLAlchemy
-from flask_moment import Moment
 import json
-
 
 
 DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')
@@ -16,6 +14,7 @@ database_path = 'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD,
 setup_db(app)
     binds a flask application and a SQLAlchemy service
 '''
+
 db = SQLAlchemy()
 
 def setup_db(app, database_path=database_path):
@@ -24,6 +23,7 @@ def setup_db(app, database_path=database_path):
     db.app = app
     db.init_app(app)
     db.create_all()
+    db.drop_all()
 
 
 ''' Actor'''
@@ -34,7 +34,7 @@ class Actor(db.Model):
    name = Column(db.String(120))
    age = Column(db.Integer)
    gender = Column(db.String(120))
-
+   
    def __repr__(self):
           return f'<actors {self.id} {self.name}>'
 
@@ -65,18 +65,18 @@ class Actor(db.Model):
 ''' Movie '''
 
 class Movie(db.Model):
-   __tablename__ = 'movie'
+   __tablename__ = 'movies'
 
    id = Column(db.Integer, primary_key=True)
    title = Column(db.String(120))
    release_date = Column(db.String(120))
 
    def __repr__(self):
-          return f'<movie {self.id} {self.title}>'
+          return f'<movies {self.id} {self.title}>'
 
-   def __init__(self, title, release):
+   def __init__(self, title, release_date):
       self.title = title
-      self.release = release
+      self.release_date = release_date
 
    def insert(self):
       db.session.add(self)
@@ -93,6 +93,6 @@ class Movie(db.Model):
       return {
          'id': self.id,
          'title': self.title,
-         'release': self.release
+         'release_date': self.release_date
       }
 
