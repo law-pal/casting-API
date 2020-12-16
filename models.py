@@ -23,8 +23,7 @@ def setup_db(app, database_path=database_path):
     db.app = app
     db.init_app(app)
     db.create_all()
-    db.drop_all()
-
+   
 
 ''' Actor'''
 class Actor(db.Model):
@@ -34,6 +33,7 @@ class Actor(db.Model):
    name = Column(db.String(120))
    age = Column(db.Integer)
    gender = Column(db.String(120))
+
    
    def __repr__(self):
           return f'<actors {self.id} {self.name}>'
@@ -59,7 +59,7 @@ class Actor(db.Model):
          'id': self.id,
          'name': self.name,
          'age': self.age,
-         'gender': self.gender
+         'gender': self.gender,
       }
 
 ''' Movie '''
