@@ -4,12 +4,12 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 
 
-# DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')
-# DB_USER = os.getenv('DB_USER', 'postgres')
-# DB_PASSWORD = os.getenv('DB_PASSWORD', 'lawpal86')
-# DB_NAME = os.getenv('DB_NAME', 'agency')
-# database_path = 'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
-database_path = 'postgres://zrtlhembidbvbk:35975434d8c6c3fd01a5d6982f9ba32e952397469c2df111d51ee61c4ba6a195@ec2-54-211-99-192.compute-1.amazonaws.com:5432/de2tl5spe26um2'
+DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')
+DB_USER = os.getenv('DB_USER', 'postgres')
+DB_PASSWORD = os.getenv('DB_PASSWORD', 'lawpal86')
+DB_NAME = os.getenv('DB_NAME', 'agency')
+database_path = 'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
+#database_path = 'postgres://zrtlhembidbvbk:35975434d8c6c3fd01a5d6982f9ba32e952397469c2df111d51ee61c4ba6a195@ec2-54-211-99-192.compute-1.amazonaws.com:5432/de2tl5spe26um2'
 '''
 setup_db(app)
     binds a flask application and a SQLAlchemy service
