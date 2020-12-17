@@ -1,0 +1,15 @@
+{
+	"info": {
+		"_postman_id": "b20c393e-4614-4377-a9ab-3c5c9471af79",
+		"name": "agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "\n\n\neyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Il9jMHQ1TVRrTllGeUhsX2NTcHVhNyJ9.eyJpc3MiOiJodHRwczovL2xhd3JlbmNlcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDgwMzMwMjk1OTgyOTg0NDA2MzkiLCJhdWQiOlsiYWdlbmN5IiwiaHR0cHM6Ly9sYXdyZW5jZXAudXMuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTYwODE3MjA3OSwiZXhwIjoxNjA4MjU4NDc5LCJhenAiOiJsclJUUkJib09scUxWTFl4U0N0bU4zbVQwN29VdFJ1QyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyJdfQ.SbaVH1MRksrynH05mRUdZhGx7WHBoGZ5TIVDRV6s7kk9A1pq0ablKVSI10KUXvlEy8C8Z-aQMI2sT29B8UW1S5xKS-2EuDTpfpUOn3QpE7HgRcjsXB4y9X87mmzfeZJLo0e_HClwOeepMyNd8Stcbg2XDCu7ZbRh7WPnIhdIZJf2IihRngtWM8KFM7oBnPx3chHgFvGN6_PWJpDmuE67_p9n2v7fdPR3TfxV-ewp6laE5MvRFEy6qk82PrbfWGHZkfRGobRSz-plYwL4sK8hGgU7ISZZIKTSHVChOWQIBT57rJW3kSnf6K7l5IkadoN-gNBjrrommaQvHCOpINY9jQ\n\n\n"
+		}
+	},
+	"protocolProfileBehavior": {}
+}
