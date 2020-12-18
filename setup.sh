@@ -4,7 +4,7 @@ set AUTH0_CLIENT_SECRET = 'pgcQuqIfd3FppUja8u2O92yNV4rTS6OAwoXn8RXFh-KiNEVgXR3-g
 
 set AUTH0_DOMAIN = 'lawrencep.us.auth0.com'
 
-set AUTH0_CALLBACK_URL = 'http://localhost:5000/callback'
+set AUTH0_CALLBACK_URL = 'http://localhost:5000/dashboard'
 
 set AUTH0_AUDIENCE = 'agency'
 
