@@ -2,26 +2,27 @@ Full Stack Casting Agency API Backend
 About
 This project provides an API to create and visualize a Casting Agency needs. Members can manage information about actors and movies.
 
-{LINK}
+LINK:
+https://paragon-agency.herokuapp.com/
 
 API
 In order to use the API users need to be authenticated. Users will need to sign in an verify themselves to obtain a Token. An overview of the API can be found below.
 
 Retrieves a list of all actors:
 curl -X GET \
-  {heroku-link} \
+  https://paragon-agency.herokuapp.com/actors \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>'
 GET /actors
 
 Retrieves a list of all movies:
 curl -X GET \
-  {heroku-link} \
+  https://paragon-agency.herokuapp.com/movies \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>'
 GET /movies
 
 Creates a new movie:
 curl -X POST \
-  {LINK} \
+  https://paragon-agency.herokuapp.com/movies \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>'
   -H 'Content-Type: application/json' \
   -d '{
@@ -31,7 +32,7 @@ POST /movies
 
 Creates a new actor:
 curl -X POST \
-  {LINK} \
+  https://paragon-agency.herokuapp.com/actors \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -43,7 +44,7 @@ curl -X POST \
 PATCH /movies/<id>
 Change information for a given movie:
 curl -X PATCH \
-  {LINK} \
+  https://paragon-agency.herokuapp.com/movies/1 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -53,7 +54,7 @@ curl -X PATCH \
 PATCH /actors/<id>
 Change information for a given actor:
 curl -X PATCH \
-  {LINK} \
+  https://paragon-agency.herokuapp.com/actors/1 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -63,13 +64,13 @@ curl -X PATCH \
 DELETE /movies/<id>
 Delete a given movie:
 curl -X DELETE \
-  {LINK/movies/5} \
+  https://paragon-agency.herokuapp.com/movies/1 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN> ' \
 
-DELETE /persons/<id>
-Delete a given person:
+DELETE /actors/<id>
+Delete a given actor:
 curl -X DELETE \
-  {LINK/actors/5} \
+  https://paragon-agency.herokuapp.com/actors/1 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN> ' \
 
 
@@ -114,13 +115,6 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 Setting the `FLASK_APP` variable to `app` directs flask to use the `app` file to find the application. 
 
 __________________________________________________________________________________
-
-Running the server
-To run the server, first set the environment variables, then execute:
-
-<!-- export APP_SETTINGS="config.DevelopmentConfig"
-export DATABASE_URL="postgresql:///familytree"
-python manage.py runserver -->
 
 Testing
 To test the API, first create a test database in postgres and then execute the tests as follows:
