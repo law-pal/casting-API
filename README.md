@@ -9,18 +9,24 @@ API
 In order to use the API users need to be authenticated. Users will need to sign in an verify themselves to obtain a Token. An overview of the API can be found below.
 
 Retrieves a list of all actors:
+```
 curl -X GET \
   https://paragon-agency.herokuapp.com/actors \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>'
 GET /actors
+```
+
 
 Retrieves a list of all movies:
+```
 curl -X GET \
   https://paragon-agency.herokuapp.com/movies \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>'
 GET /movies
+```
 
 Creates a new movie:
+```
 curl -X POST \
   https://paragon-agency.herokuapp.com/movies \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>'
@@ -29,8 +35,10 @@ curl -X POST \
     "title": "Transformers",
     "release_date": "2-25-2010",
 POST /movies
+```
 
 Creates a new actor:
+```
 curl -X POST \
   https://paragon-agency.herokuapp.com/actors \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
@@ -40,9 +48,11 @@ curl -X POST \
     "age": 50,
     "gender": "Male"
 }'
+```
 
 PATCH /movies/<id>
 Change information for a given movie:
+```
 curl -X PATCH \
   https://paragon-agency.herokuapp.com/movies/1 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
@@ -50,9 +60,13 @@ curl -X PATCH \
   -d '{
     "title": "Jumanji"
 }'
+```
+
+
 
 PATCH /actors/<id>
 Change information for a given actor:
+```
 curl -X PATCH \
   https://paragon-agency.herokuapp.com/actors/1 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN>' \
@@ -60,19 +74,23 @@ curl -X PATCH \
   -d '{
     "name": "Kevin Hart"
 }'
+```
 
 DELETE /movies/<id>
 Delete a given movie:
+```
 curl -X DELETE \
   https://paragon-agency.herokuapp.com/movies/1 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN> ' \
+```
 
 DELETE /actors/<id>
 Delete a given actor:
+```
 curl -X DELETE \
   https://paragon-agency.herokuapp.com/actors/1 \
   -H 'Authorization: Bearer <INSERT_YOUR_TOKEN> ' \
-
+```
 
 Installation
 The following section explains how to set up and run the project locally.
@@ -119,5 +137,7 @@ ________________________________________________________________________________
 Testing
 To test the API, first create a test database in postgres and then execute the tests as follows:
 
+```
 sudo -u postgres createdb agency_test
 python test_app.py
+```
