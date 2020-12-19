@@ -92,7 +92,7 @@ def create_app(test_config=None):
     '''MOVIES'''
 
     @app.route('/movies')
-    @requires_auth('get:movies')
+    #@requires_auth('get:movies')
     def get_movies(jwt):
 
         try:
