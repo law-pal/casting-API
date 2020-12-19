@@ -2,7 +2,16 @@ import os
 from jose import jwt
 from os import environ as env
 from werkzeug.exceptions import HTTPException
-from flask import Flask, request, abort, jsonify, redirect, render_template, session, url_for
+from flask import (
+    Flask,
+    jsonify,
+    abort,
+    render_template,
+    request,
+    redirect,
+    session,
+    url_for
+)
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_cors import CORS

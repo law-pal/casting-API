@@ -77,8 +77,10 @@ def get_token_auth_header():
 
 '''
    implements check_permissions(permission, payload) method
-    it should raise an AuthError if permissions are not included in the payload
-    it should raise an AuthError if the requested permission string is not in the
+    it should raise an AuthError if permissions are
+    not included in the payload
+    it should raise an AuthError if the requested
+    permission string is not in the
     payload permissions array return true otherwise
 
 '''
