@@ -2,5 +2,5 @@ env
 .vscode
 __pycache__
 .env
-auth.config.py
-setup.sh
+auth_config
+setup
