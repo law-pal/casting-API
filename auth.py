@@ -216,7 +216,7 @@ def requires_signed_in(f):
     def decorated(*args, **kwargs):
         if 'jwt_token' not in session:
             # Redirect to Login page here
-            return redirect('/')
+            return redirect('/login')
         return f(*args, **kwargs)
 
     return decorated
